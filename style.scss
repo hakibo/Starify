@@ -1,0 +1,657 @@
+//Breakpoint Mixin
+$min-xs: 375px;
+$min-sm: 768px;
+$min-md: 1024px;
+$min-lg: 1360px;
+$min-xl: 1600px;
+$P700: #543c90;
+$N800: #101840;
+$V600: #833db4;
+$V300: #C387f4;
+$P600: #654C9F;
+$C200: #5FE2FF;
+$I400: #7188ff;
+$f48: 48px;
+$f36: 36px;
+$f16: 16px;
+$f18: 18px;
+$f20: 20px;
+$f24: 24px;
+$N800: #101840;
+$N600: #535977;
+$P50: #f9f8fc;
+
+.bold {
+  font-weight: 600;
+}
+
+.bg-primary {
+  background-color: $V600!important;
+}
+
+.bg-purple {
+  background-color: $P50;
+
+  &.btn {
+    background-color: $P600;
+  }
+}
+
+.bg-cyan {
+  &.btn {
+    background-color: $C200;
+  }
+}
+
+.bg-violet {
+  &.btn {
+    background-color: $V300;
+  }
+}
+
+.bg-iris {
+  &.btn {
+    background-color: $I400;
+  }
+}
+
+.bg-dark {
+  background-color: $P700 !important;
+}
+// min screen 375px
+@mixin min-xs {
+  @media screen and (min-width: $min-xs) {
+    @content;
+  }
+}
+//min screen 768px
+@mixin min-sm {
+  @media screen and (min-width: $min-sm) {
+    @content;
+  }
+}
+//min screen 1024px
+@mixin min-md {
+  @media screen and (min-width: $min-md) {
+    @content;
+  }
+}
+//min screen 1360px
+@mixin min-lg {
+  @media screen and (min-width: $min-lg) {
+    @content;
+  }
+}
+//min screen 1600px
+@mixin min-xl {
+  @media screen and (min-width: $min-xl) {
+    @content;
+  }
+}
+//fix container for xlarge screen
+@media screen and (min-width: $min-xl) {
+  .container {
+    min-width: 1440px;
+  }
+}
+//fix container for large screen
+@media screen and (min-width: $min-lg) {
+  .container {
+    max-width: 1200px;
+  }
+}
+///////////////////////////
+
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  color: $N800 !important;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+    font-weight: 600 !important;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: inherit;
+
+    &:hover {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+
+  .f-48 {
+    line-height: 1.5 !important;
+    @include min-xs {
+      font-size: $f24 !important;
+    }
+    @include min-sm {
+      font-size: 32px !important;
+    }
+    @include min-md {
+      font-size: $f36 !important;
+    }
+    @include min-lg {
+      font-size: $f48 !important;
+    }
+  }
+
+  .f-36 {
+    font-size: $f24 !important;
+    line-height: 1.25 !important;
+    @include min-sm {
+      font-size: 28px !important;
+    }
+    @include min-lg {
+      font-size: $f36 !important;
+    }
+  }
+
+  .f-24 {
+    font-size: 24px !important;
+    line-height: 1.25 !important;
+  }
+
+  .f-18 {
+    font-size: $f16 !important;
+    line-height: 1.5 !important;
+    @include min-sm {
+      font-size: $f18 !important;
+    }
+  }
+
+  .f-20 {
+    font-size: $f20 !important;
+    line-height: 1.25 !important;
+  }
+}
+
+.btn,
+a,
+button {
+  &.focus,
+  &:focus,
+  &:hover {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.btn-filled {
+  height: 40px;
+  border-radius: 40px;
+  font-size: $f16;
+  border: none;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.btn-outline {
+  color: white;
+  border: 1px solid white;
+  height: 40px;
+  border-radius: 20px;
+  font-size: $f16;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 20px 0;
+
+  &:focus,
+  &:hover {
+    color: $V300;
+    border-color: $V300;
+  }
+  @include min-sm {
+    margin: auto;
+  }
+  @include min-lg {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+.top-header {
+  width: 100%;
+  background: $P700;
+  min-height: 40px;
+  @include min-sm {
+    min-height: 80px;
+  }
+
+  .nav-item {
+    margin: auto 15px;
+    text-align: center;
+
+    &.active {
+      opacity: 0.5;
+    }
+
+    .nav-link {
+      color: white;
+      font-size: $f16;
+      text-align: center;
+      line-height: 2.0;
+
+      &:hover {
+        color: $V300;
+      }
+    }
+  }
+
+  .navbar-brand {
+    img {
+      height: 38px;
+      @include min-md {
+        height: 52px!important;
+      }
+    }
+
+    &.fix {
+      display: none;
+    }
+
+    img {
+      height: 40px;
+    }
+  }
+
+  .navbar-toggler {
+    border: none;
+  }
+
+  &.sticky-top {
+    min-height: 60px;
+    background: white;
+    -webkit-box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.15);
+
+    .navbar-toggler {
+      color: $N600;
+    }
+
+    .navbar-brand {
+      display: none;
+
+      &.fix {
+        display: inline-block;
+      }
+    }
+
+    .btn-outline {
+      border: none;
+      background: $V600;
+      line-height: 1.8;
+
+      &.foucus,
+      &:focus,
+      &:hover {
+        background: $P700;
+        color: white;
+      }
+    }
+
+    .bg-dark {
+      background-color: white!important;
+    }
+
+    .navbar {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+
+    .nav-item {
+      .nav-link {
+        color: $N800;
+      }
+    }
+  }
+}
+
+.bannerHome {
+  background: url("images/header-svg.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% auto;
+  height: auto;
+  @include min-lg {
+    height: calc(100vh - 80px);
+  }
+  @include min-xl {
+    background-size: 100% 100%;
+  }
+
+  .social-btn-group {
+    display: none !important;
+
+    &.mobile {
+      display: flex !important;
+      @include min-md {
+        display: none !important;
+      }
+    }
+    @include min-md {
+      display: flex !important;
+    }
+  }
+
+  .banner-info {
+    text-align: center;
+
+    h1 {
+      font-size: $f48;
+      @include min-md {
+        text-align: left;
+      }
+    }
+
+    h4 {
+      font-size: $f18;
+      display: none;
+      @include min-md {
+        display: block;
+      }
+      @include min-md {
+        text-align: left;
+      }
+    }
+  }
+}
+
+.pageHeading {
+  background: url("images/pHeading.png") no-repeat;
+  background-size: contain;
+  min-height: 280px;
+  h4{
+    color: $N800!important;
+  }
+  h2{
+    padding-top: 1.5rem!important;
+    padding-bottom: 2rem!important;
+  }
+  @include min-sm{
+    h4{
+      color: white!important;
+    }
+    h2{
+      padding-top: 3rem!important;
+      padding-bottom: 2rem!important;
+    }
+  }
+  @include min-md {
+    background-size: 100% auto;
+    min-height: 320px;
+  }
+  @include min-lg {
+    min-height: 360px;
+  }
+  @include min-xl {
+    min-height: 480px;
+
+    h2 {
+      padding-top: 4rem!important;
+    }
+  }
+}
+
+.social-btn-group {
+  .social-btn {
+    background: #482e7f;
+    padding: 8px 25px;
+    border-radius: 30px;
+  }
+
+  img {
+    height: 30px;
+    @include min-md {
+      height: 40px;
+    }
+  }
+}
+
+.features {
+  p {
+    color: $N600;
+  }
+
+  .box {
+    height: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    background: white;
+
+    &:hover {
+      -webkit-box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.15);
+    }
+
+    &.flex {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .info {
+      h4 {
+        font-size: $f20;
+      }
+
+      p {
+        font-size: 14px;
+        color: $N600;
+      }
+    }
+
+    .no-min-height {
+      min-height: auto;
+    }
+  }
+}
+
+.services {
+  .bg-primary {
+    height: 52px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 14px;
+
+    &:hover {
+      background-color: $P700 !important;
+    }
+    @include min-sm {
+      font-size: $f16;
+    }
+  }
+}
+
+.partners {
+  .thumb-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
+    justify-items: center;
+    align-items: center;
+    @include min-sm {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+  }
+}
+
+.footer {
+  .download {
+    background: url("images/double-polygon-brg.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto;
+    min-height: 320px;
+    flex-direction: column;
+    @include min-sm {
+      background-position: center left;
+    }
+  }
+
+  .sitemap {
+    background: url("images/footer.svg") #543c90;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 101%;
+    padding-top: 60px;
+    @include min-md {
+      padding-top: 100px;
+    }
+    @include min-md {
+      background-size: cover;
+      padding-top: 146px;
+    }
+
+    .social {
+      a {
+        margin: 5px;
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        border-radius: 100%;
+        background-color: white;
+        color: $N800;
+        text-align: center;
+
+        i {
+          line-height: 1.5;
+          font-size: 1.2em;
+        }
+      }
+    }
+
+    .d-flex {
+      flex-direction: column;
+      @include min-sm {
+        flex-direction: row;
+      }
+
+      h6 {
+        margin-right: 0!important;
+        margin-top: 20px!important;
+        font-size: 14px;
+        @include min-sm {
+          margin-right: auto!important;
+          font-size: 16px;
+        }
+      }
+
+      * {
+        text-align: center;
+        @include min-sm {
+          text-align: inherit;
+        }
+      }
+    }
+  }
+}
+
+.quote {
+  margin-top: 30px;
+  border-left: 2px solid $V600;
+  padding-left: 16px;
+  text-align: left !important;
+
+  p {
+    font-size: 14px;
+    color: $N600;
+  }
+
+  &.large {
+    border-left-width: 4px;
+  }
+}
+
+.intro {
+  text-align: center;
+  &.pattern {
+    background: url("images/pattern.svg") repeat;
+  }
+
+  .f-18 {
+    line-height: 1.8!important;
+  }
+  @include min-sm{
+    text-align: inherit;
+  }
+}
+
+.asset {
+  text-align: center;
+  .bg-poly {
+    background: url("images/poly.svg") no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  &.bg-left {
+    background-position: center left !important;
+    background-size: contain !important;
+    @include min-md{text-align: right;}
+    &.iris {
+      background: url("images/iris.svg") no-repeat;
+    }
+  }
+
+  &.bg-right {
+    background-position: center right !important;
+    background-size: contain !important;
+
+    &.cyan {
+      background: url("images/cyan.svg") no-repeat;
+    }
+
+    &.violet {
+      background: url("images/violet.svg") no-repeat;
+    }
+  }
+
+  .btn-filled {
+    height: 48px;
+    line-height: 2.1;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  @include min-md{
+     text-align: inherit;
+  }
+}
+
+.sumary{
+  text-align: center;
+  p{
+    margin: 20px 0;
+    font-size: $f16;
+    font-weight: 600;
+  }
+  mark{
+    color: $V600;
+    background-color: transparent;
+  }
+  @include min-md{
+    text-align: inherit;
+  }
+
+}
+
+.big-service {
+  background: #f9f8fc;
+}
