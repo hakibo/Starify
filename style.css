@@ -7,20 +7,29 @@
 }
 
 .bg-purple {
-  background-color: #f9f8fc;
+  background-color: #f9f8fc !important;
 }
 .bg-purple.btn {
-  background-color: #654C9F;
+  background-color: #654C9F !important;
 }
 
+.bg-cyan {
+  background-color: #EEFAFE;
+}
 .bg-cyan.btn {
   background-color: #5FE2FF;
 }
 
+.bg-violet {
+  background-color: #FAF2FF;
+}
 .bg-violet.btn {
   background-color: #C387f4;
 }
 
+.bg-iris {
+  background-color: #ECEEFF;
+}
 .bg-iris.btn {
   background-color: #7188ff;
 }
@@ -314,7 +323,7 @@ button:hover {
 .pageHeading {
   background: url("images/pHeading.png") no-repeat;
   background-size: contain;
-  min-height: 280px;
+  min-height: 210px;
 }
 .pageHeading h4 {
   color: #101840 !important;
@@ -665,6 +674,65 @@ button:hover {
 @media screen and (min-width: 1024px) {
   .sumary {
     text-align: inherit;
+  }
+}
+
+img.shadow {
+  -webkit-box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.15);
+  border-radius: 36px;
+}
+
+.feature-box {
+  position: sticky;
+  top: 5rem;
+  padding: 0 1rem 2rem 1rem;
+}
+@media screen and (min-width: 768px) {
+  .feature-box {
+    padding-top: 5rem;
+  }
+}
+.feature-box ul {
+  margin-top: 30px;
+}
+.feature-box ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #535977;
+}
+.feature-box ul li span {
+  color: #101840;
+}
+.feature-box .xs-center {
+  display: block;
+  margin: auto;
+}
+.feature-box h2,
+.feature-box h3,
+.feature-box h4 {
+  text-align: center;
+}
+.feature-box .f-24 {
+  font-size: 18px !important;
+}
+@media screen and (min-width: 768px) {
+  .feature-box .f-24 {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .feature-box .xs-center {
+    display: block;
+    margin: 0;
+  }
+  .feature-box h2,
+.feature-box h3,
+.feature-box h4 {
+    text-align: left;
   }
 }
 

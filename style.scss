@@ -30,26 +30,32 @@ $P50: #f9f8fc;
 }
 
 .bg-purple {
-  background-color: $P50;
+  background-color: $P50 !important;
 
   &.btn {
-    background-color: $P600;
+    background-color: $P600 !important;
   }
 }
 
 .bg-cyan {
+  background-color: #EEFAFE;
+
   &.btn {
     background-color: $C200;
   }
 }
 
 .bg-violet {
+  background-color: #FAF2FF;
+
   &.btn {
     background-color: $V300;
   }
 }
 
 .bg-iris {
+  background-color: #ECEEFF;
+
   &.btn {
     background-color: $I400;
   }
@@ -375,19 +381,22 @@ button {
 .pageHeading {
   background: url("images/pHeading.png") no-repeat;
   background-size: contain;
-  min-height: 280px;
-  h4{
+  min-height: 210px;
+
+  h4 {
     color: $N800!important;
   }
-  h2{
+
+  h2 {
     padding-top: 1.5rem!important;
     padding-bottom: 2rem!important;
   }
-  @include min-sm{
-    h4{
+  @include min-sm {
+    h4 {
       color: white!important;
     }
-    h2{
+
+    h2 {
       padding-top: 3rem!important;
       padding-bottom: 2rem!important;
     }
@@ -582,6 +591,7 @@ button {
 
 .intro {
   text-align: center;
+
   &.pattern {
     background: url("images/pattern.svg") repeat;
   }
@@ -589,13 +599,14 @@ button {
   .f-18 {
     line-height: 1.8!important;
   }
-  @include min-sm{
+  @include min-sm {
     text-align: inherit;
   }
 }
 
 .asset {
   text-align: center;
+
   .bg-poly {
     background: url("images/poly.svg") no-repeat;
     background-size: contain;
@@ -605,7 +616,10 @@ button {
   &.bg-left {
     background-position: center left !important;
     background-size: contain !important;
-    @include min-md{text-align: right;}
+    @include min-md {
+      text-align: right;
+    }
+
     &.iris {
       background: url("images/iris.svg") no-repeat;
     }
@@ -630,26 +644,87 @@ button {
     padding-left: 30px;
     padding-right: 30px;
   }
-  @include min-md{
-     text-align: inherit;
+  @include min-md {
+    text-align: inherit;
   }
 }
 
-.sumary{
+.sumary {
   text-align: center;
-  p{
+
+  p {
     margin: 20px 0;
     font-size: $f16;
     font-weight: 600;
   }
-  mark{
+
+  mark {
     color: $V600;
     background-color: transparent;
   }
-  @include min-md{
+  @include min-md {
     text-align: inherit;
   }
+}
 
+img.shadow {
+  -webkit-box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.15);
+  border-radius: 36px;
+}
+
+.feature-box {
+  position: sticky;
+  top: 5rem;
+  padding: 0 1rem 2rem 1rem;
+  @include min-sm {
+    padding-top: 5rem;
+  }
+
+  ul {
+    margin-top: 30px;
+
+    li {
+      display: flex;
+      font-size: 14px;
+      line-height: 1.5;
+      color: $N600;
+
+      span {
+        color: $N800;
+      }
+    }
+  }
+
+  .xs-center {
+    display: block;
+    margin: auto;
+  }
+
+  h2,
+  h3,
+  h4 {
+    text-align: center;
+  }
+
+  .f-24 {
+    font-size: $f18!important;
+    @include min-sm {
+      font-size: $f24;
+    }
+  }
+  @include min-sm {
+    .xs-center {
+      display: block;
+      margin: 0;
+    }
+
+    h2,
+    h3,
+    h4 {
+      text-align: left;
+    }
+  }
 }
 
 .big-service {
