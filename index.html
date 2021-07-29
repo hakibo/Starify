@@ -35,10 +35,10 @@
               <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="overview.html">Overview</a>
+              <a class="nav-link" href="features.html">Features</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="features.html">App Features</a>
+              <a class="nav-link" href="overview.html">Overview</a>
             </li>
             <li class="nav-item">
               <a class="btn btn-outline" href="#">Get Started</a>
@@ -68,8 +68,9 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-5" style="margin: auto 0;">
-          <img src="images/right.png" alt="" class="img-fluid d-block mx-auto">
+        <div class="col-lg-5 mock" style="margin: auto 0;">
+          <!-- <img src="images/right.png" alt="" class="img-fluid d-block mx-auto"> -->
+          <img src="images/chart.svg" alt="" class="img-fluid d-block mx-auto chart">
           <div class="social-btn-group d-flex justify-content-center mobile">
             <div class="social-btn mr-3">
               <a href="#"><img src="images/play-store-icon.png" alt=""></a>
@@ -99,7 +100,7 @@
                 portfolio climb as you aggregate your digital assets (loyalty and rewards points,
                 cryptocurrency, and cash).</p>
             </div>
-            <button type="button" class="btn btn-filled bg-purple text-white mt-4" onclick="javascript:location.href='overview.html'">Learn about Starify App</button>
+            <button type="button" class="btn btn-filled bg-purple text-white mt-4" onclick="javascript:location.href='features.html#digi'">Learn about Starify App</button>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 col-xs-8 mb-5">
@@ -111,7 +112,7 @@
                 Starify’s
                 simple and secure trading platform.</p>
             </div>
-            <button type="button" class="btn btn-filled bg-cyan mt-4" onclick="javascript:location.href='overview.html'">Learn about Crypto</button>
+            <button type="button" class="btn btn-filled bg-cyan mt-4" onclick="javascript:location.href='features.html#crypto'">Learn about Crypto</button>
           </div>
 
         </div>
@@ -123,7 +124,7 @@
               <p>Starify makes it easy to use those points you forgot about to pay your friends or at your
                 favorite store.</p>
             </div>
-            <button type="button" class="btn btn-filled bg-violet mt-4" onclick="javascript:location.href='overview.html'">Learn about S-Cash</button>
+            <button type="button" class="btn btn-filled bg-violet mt-4" onclick="javascript:location.href='features.html#scash'">Learn about S-Cash</button>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 col-xs-8 mb-5">
@@ -134,7 +135,7 @@
               <p>Load your gifts cards into the Starify App so you can aggregate or spend all in one
                 convenient spot. Because the best gift cards are the ones you remember to spend.</p>
             </div>
-            <button type="button" class="btn btn-filled bg-iris mt-4" onclick="javascript:location.href='overview.html'">Learn about Gift Cards</button>
+            <button type="button" class="btn btn-filled bg-iris mt-4" onclick="javascript:location.href='features.html#gift'">Learn about Gift Cards</button>
           </div>
         </div>
       </div>
@@ -222,22 +223,20 @@
   <script src="bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
   <script defer src="app.js"></script>
   <script>
-  document.addEventListener("DOMContentLoaded", function() {
-  window.addEventListener('scroll', function() {
+    document.addEventListener("DOMContentLoaded", function() {
+      window.addEventListener('scroll', function() {
         if (window.scrollY > 80) {
           document.getElementById('top-header').classList.add('sticky-top');
           // add padding top to show content behind navbar
           navbar_height = document.querySelector('.navbar').offsetHeight;
           document.body.style.paddingTop = navbar_height + 'px';
-}
-
-else {
-  document.getElementById('top-header').classList.remove('sticky-top');
-           // remove padding top from body
+        } else {
+          document.getElementById('top-header').classList.remove('sticky-top');
+          // remove padding top from body
           document.body.style.paddingTop = '0';
-}
+        }
+      });
     });
-  });
   </script>
 </body>
 

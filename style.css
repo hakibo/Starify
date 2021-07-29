@@ -48,6 +48,23 @@
     max-width: 1200px;
   }
 }
+.mock {
+  background: url("images/mock.png") no-repeat;
+  min-height: calc(100vh - 120px);
+  background-position: center;
+  vertical-align: middle;
+}
+.mock .chart {
+  margin: auto 0;
+}
+@media screen and (min-width: 768px) {
+  .mock .chart {
+    position: absolute;
+    top: 35%;
+    left: -3rem;
+  }
+}
+
 * {
   padding: 0;
   margin: 0;

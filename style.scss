@@ -21,6 +21,8 @@ $N800: #101840;
 $N600: #535977;
 $P50: #f9f8fc;
 
+
+
 .bold {
   font-weight: 600;
 }
@@ -107,6 +109,25 @@ $P50: #f9f8fc;
   }
 }
 ///////////////////////////
+
+
+.mock{
+  background: url("images/mock.png") no-repeat;
+  min-height: calc(100vh - 120px);
+  background-position: center;
+  vertical-align: middle;
+  .chart{
+    margin: auto 0;
+    @include min-sm{
+      position: absolute;
+      top: 35%;
+      left: -3rem;
+    }
+  }
+}
+
+
+
 
 * {
   padding: 0;
