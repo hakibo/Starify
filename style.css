@@ -753,6 +753,17 @@ img.shadow {
   }
 }
 
-.big-service {
-  background: #f9f8fc;
+.lang {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  margin-bottom: 0;
+}
+.lang li {
+  padding: 0 8px;
+  color: white;
+}
+.lang li.active {
+  opacity: 0.3;
 }

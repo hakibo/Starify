@@ -747,7 +747,17 @@ img.shadow {
     }
   }
 }
+.lang{
+    display: flex;
+    list-style: none;
+    margin-bottom: 0;
+    li{
+      padding: 0 8px;
+      color: white;
+      &.active{
+        opacity: 0.3;
+      }
+    }
 
-.big-service {
-  background: #f9f8fc;
+
 }
