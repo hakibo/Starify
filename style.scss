@@ -340,11 +340,10 @@ button {
       padding-top: 5px;
       padding-bottom: 5px;
     }
-
-    .nav-item {
-      .nav-link {
+    .lang li a,
+    .nav-item .nav-link {
         color: $N800;
-      }
+
     }
   }
 }
@@ -752,7 +751,7 @@ img.shadow {
     list-style: none;
     margin-bottom: 0;
     li{
-      padding: 0 8px;
+      padding: 10px 8px;
       color: white;
       &.active{
         opacity: 0.3;

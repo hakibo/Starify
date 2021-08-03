@@ -270,6 +270,7 @@ button:hover {
   padding-top: 5px;
   padding-bottom: 5px;
 }
+.top-header.sticky-top .lang li a,
 .top-header.sticky-top .nav-item .nav-link {
   color: #101840;
 }
@@ -761,7 +762,7 @@ img.shadow {
   margin-bottom: 0;
 }
 .lang li {
-  padding: 0 8px;
+  padding: 10px 8px;
   color: white;
 }
 .lang li.active {
